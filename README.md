@@ -11,7 +11,7 @@
 | first_name      | string | null: false |
 | last_name_kana  | string | null: false |
 | first_name_kana | string | null: false |
-
+| birth_date      | date   | null: false |
 ### Association
 
 - has_many :items
@@ -19,18 +19,18 @@
 
 ## items テーブル
 
-| Column           | Type    | Options     |
-| ---------------- | ------- | ----------- |
-| user             | string  | null: false |
-| name             | string  | null: false |
-| description      |  text   | null: false |
-| images_id        | integer | null: false |
-| category_id      | integer | null: false |
-| condetion_id     | integer | null: false | 
-| postage_payer_id | integer | null: false |
-| prefectre_id     | integer | null: false |
-| handling_time_id | integer | null: false |
-| price            | integer | null: false |
+| Column           | Type       | Options     |
+| ---------------- | ---------- | ----------- |
+| user             | regerences | null: false |
+| name             |   string   | null: false |
+| description      |    text    | null: false |
+| images_id        |   integer  | null: false |
+| category_id      |   integer  | null: false |
+| condetion_id     |   integer  | null: false | 
+| postage_payer_id |   integer  | null: false |
+| prefectre_id     |   integer  | null: false |
+| handling_time_id |   integer  | null: false |
+| price            |   integer  | null: false |
 ### Association
 
 - belongs_to :users
