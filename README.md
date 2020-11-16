@@ -21,10 +21,9 @@
 
 | Column           | Type       | Options     |
 | ---------------- | ---------- | ----------- |
-| user             | regerences | null: false |
+| user             | references | null: false |
 | name             |   string   | null: false |
 | description      |    text    | null: false |
-| images_id        |   integer  | null: false |
 | category_id      |   integer  | null: false |
 | condetion_id     |   integer  | null: false | 
 | postage_payer_id |   integer  | null: false |
