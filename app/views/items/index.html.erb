@@ -135,7 +135,7 @@
 
           <%# 商品が売れていればsold outを表示しましょう %>
           <div class='sold-out'>
-            <% if %>
+          <% if item.order.present? %>
             <span>Sold Out!!</span>
           <% end %>
           </div>

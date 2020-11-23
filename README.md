@@ -32,10 +32,10 @@
 | price            |   integer  | null: false |
 ### Association
 
-- belongs_to :users
-- has_one :purchases
+- belongs_to :user
+- has_one :order
 
-## purchases テーブル
+## orders テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
@@ -44,8 +44,8 @@
 
 ### Association
 
-- belongs_to :users
-- belongs_to :items
+- belongs_to :user
+- belongs_to :item
 - has_one : addresses
 
 ## addresses テーブル
@@ -53,13 +53,14 @@
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
 | post_code      | string     | null: false                    |
-| prefectures_id | integer    | null: false, foreign_key: true |
+| prefectre_id   | integer    | null: false,                   |
 | city           | string     | null: false,                   |
+| house_number   | string     | null: false,                   |
 | building_name  | string     |                                |
-| phone_number   | string     | null: false, nuiqueness: true  |
-| purchase       | references | null: false, foreign_key: tyue |
+| phone_number   | string     | null: false,                   |
+| order          | references | null: false, foreign_key: true |
 
 
 ### Association
 
-- belongs_to :purchases
+- belongs_to :order
